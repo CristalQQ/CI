@@ -8,7 +8,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 service = Service(ChromeDriverManager().install())
 options = Options()
-options.add_argument("--user-agent=")
 options.add_argument("--headless")
 
 
