@@ -30,7 +30,7 @@ def generate_pairs():
 # )
 
 
-@pytest.mark.skip
+@pytest.mark.regression
 @pytest.mark.parametrize("creds", generate_pairs())
 def test_login(driver, creds):
     login, password = creds
