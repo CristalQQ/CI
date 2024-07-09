@@ -34,7 +34,7 @@ def generate_pairs():
 @pytest.mark.parametrize("creds", generate_pairs())
 def test_login(driver, creds):
     login, password = creds
-    driver.implicitly_wait(5)
+    driver.implicitly_wait(10)
     driver.get("https://magento.softwaretestingboard.com/customer/account/login/")
     driver.find_element(
         *EMAIL_FIELD).send_keys(login)
