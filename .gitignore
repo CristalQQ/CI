@@ -1,4 +1,5 @@
 __pycache__
-.gitigonre
 Pipfile
 Pipfile.lock
+allure-results
+.gitignore

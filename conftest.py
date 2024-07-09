@@ -15,6 +15,7 @@ options.add_argument("--headless")
 @pytest.fixture()
 def driver():
     driver = webdriver.Chrome(service=service, options=options)
+    driver.implicitly_wait(10)
     yield driver
     driver.quit()
 
@@ -22,6 +23,7 @@ def driver():
 @pytest.fixture()
 def page(request):
     driver = webdriver.Chrome(service=service, options=options)
+    driver.implicitly_wait(10)
     param = request.param
     if param == "whats_new":
         driver.get("https://magento.softwaretestingboard.com/what-is-new.html")
