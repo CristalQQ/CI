@@ -41,7 +41,7 @@ jobs:
             -o artifacts.zip
         - run: mkdir allure-results && unzip artifacts.zip -d allure-results
         - name: Store allure hustory
-          uses: actions/upload-artufact@v3
+          uses: actions/upload-artifact@v3
           with:
             name: allure-result
             path:
