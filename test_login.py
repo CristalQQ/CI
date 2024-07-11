@@ -11,4 +11,5 @@ class TestLogin:
         logins = LoginPage(driver, link)
         logins.open_page()
         logins.go_to_login_page(creds)
-        logins.get_message_error()
+        message_error = logins.get_message_error()
+        assert message_error == "The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later."

@@ -13,6 +13,5 @@ class LoginPage(BasePage):
         self.is_element_present(LoginPageLocators.SING_IN_BUTTON).click()
 
     def get_message_error(self):
-        message_error = self.is_element_present(
+        return self.is_element_present(
             LoginPageLocators.MESSAGE_ERROR_FIELD).text
-        assert message_error == "The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later."
