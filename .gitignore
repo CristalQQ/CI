@@ -3,3 +3,4 @@ Pipfile
 Pipfile.lock
 allure-results
 .gitignore
+.idea
